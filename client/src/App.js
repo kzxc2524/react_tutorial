@@ -72,18 +72,20 @@ class App extends React.Component{
             <Table className={classes.table}>
               <TableHead>
                 <TableRow>
-                  <TableCell>id</TableCell>
-                  <TableCell>image</TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>birthday</TableCell>
-                  <TableCell>gender</TableCell>
-                  <TableCell>job</TableCell>
+                  <TableCell>번호</TableCell>
+                  <TableCell>사진</TableCell>
+                  <TableCell>이름</TableCell>
+                  <TableCell>생년월일</TableCell>
+                  <TableCell>성별</TableCell>
+                  <TableCell>직업</TableCell>
+                  <TableCell>설정</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {this.state.customers ? this.state.customers.map(c => {
                     return(
                       <Customer
+                        stateRefresh={this.stateRefresh}
                         id={c.id}
                         image={c.image}
                         name={c.name}
